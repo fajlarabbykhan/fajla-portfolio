@@ -6,5 +6,5 @@ module.exports = {
       logo: ['Great Vibes'],
     }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
