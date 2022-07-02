@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa'
 import { HiOutlineMail } from 'react-icons/hi'
 import { BsFillPersonLinesFill } from 'react-icons/bs'
 import resume from '../assets/Resume-Fajla_Rabby_Khan.pdf'
+import { Link } from 'react-scroll';
 const Navber = () => {
     const [nav, setNav] = useState(false)
     const handleHamMenu = () => setNav(!nav)
@@ -13,11 +14,13 @@ const Navber = () => {
             </div>
             <div className=''>
                 <ul className='hidden md:flex '>
-                    <li>Home</li>
+                    <li>
+                        <Link to="home" smooth={true} duration={500}>Home</Link>
+                    </li>
                     {/* <li>About</li> */}
-                    <li>Skills</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                    <li><Link to="skills" smooth={true} duration={500}>Skills</Link></li>
+                    <li><Link to="projects" smooth={true} duration={500}>Projects</Link></li>
+                    <li><Link to="contact" smooth={true} duration={500}>Contact</Link></li>
                 </ul>
             </div>
             <div onClick={handleHamMenu} className='md:hidden z-10'>
@@ -25,14 +28,14 @@ const Navber = () => {
             </div>
 
             <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
-                <li className='py-3 text-2xl'>Home</li>
+                <li className='py-3 text-2xl'><Link onClick={handleHamMenu} to="home" smooth={true} duration={500}>Home</Link></li>
                 {/* <li className='py-3 text-2xl'>About</li> */}
-                <li className='py-3 text-2xl'>Resume</li>
+                <li className='py-3 text-2xl'><a onClick={handleHamMenu} href={resume} download className=''>Resume</a></li>
                 {/* <a href={resume} download className='btn'>Review CV</a> */}
 
-                <li className='py-3 text-2xl'>Skills</li>
-                <li className='py-3 text-2xl'>Projects</li>
-                <li className='py-3 text-2xl'>Contact</li>
+                <li className='py-3 text-2xl'><Link onClick={handleHamMenu} to="skills" smooth={true} duration={500}>Skills</Link></li>
+                <li className='py-3 text-2xl'> <li><Link onClick={handleHamMenu} to="projects" smooth={true} duration={500}>Projects</Link></li></li>
+                <li className='py-3 text-2xl'><Link onClick={handleHamMenu} to="contact" smooth={true} duration={500}>Contact</Link></li>
                 {/* #0a192f */}
             </ul>
             <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
