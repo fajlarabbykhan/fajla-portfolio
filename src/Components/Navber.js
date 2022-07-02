@@ -14,7 +14,7 @@ const Navber = () => {
             <div className=''>
                 <ul className='hidden md:flex '>
                     <li>Home</li>
-                    <li>About</li>
+                    {/* <li>About</li> */}
                     <li>Skills</li>
                     <li>Projects</li>
                     <li>Contact</li>
@@ -26,7 +26,7 @@ const Navber = () => {
 
             <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
                 <li className='py-3 text-2xl'>Home</li>
-                <li className='py-3 text-2xl'>About</li>
+                {/* <li className='py-3 text-2xl'>About</li> */}
                 <li className='py-3 text-2xl'>Resume</li>
                 {/* <a href={resume} download className='btn'>Review CV</a> */}
 
